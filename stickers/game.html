@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="styles.css">
+		<title>Stickers</title>
+	</head>
+	
+	<body>
+		<div id="wrapper">
+
+			<div id="table">21</div><br>
+			<p>ruch gracza nr. <p id="nrPlayer">1</p></p>
+			<button id="1" onclick="tableStatusUpdate('1')">podnieś 1</button>
+			<button id="2" onclick="tableStatusUpdate('2')">podnieś 2</button>
+			<button id="3" onclick="tableStatusUpdate('3')">podnieś 3</button> <br>
+            
+
+			<script>
+				
+				function tableStatusUpdate(numberOfSticks) {
+					const table = document.getElementById("table");
+					const nrPlayer = document.getElementById("nrPlayer");
+
+					let stickersOnTable = table.innerText - numberOfSticks;
+					if (stickersOnTable <= 0)
+					window.alert("Wygrał gracz nr. "+nrPlayer.innerText);
+					table.innerText = stickersOnTable;
+					if (nrPlayer.innerText == 1) 
+						nrPlayer.innerText = 2;
+						else nrPlayer.innerText = 1;
+				}
+
+			</script>
+
+
+		</div>
+	</body>
+</html>

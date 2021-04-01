@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="styles.css">
+		<title>Stickers</title>
+	</head>
+	
+	<body>
+		<div id="wrapper">
+
+			
+			<button id="startButton" onclick="game()">START</button>
+			<button id="instructionButton" onclick="instruction()">INSTRUKCJA</button>
+			<div id="instruction" class="hidden">
+				<p id="textInstruction">Na planszy leży 21 patyków.<br>
+					Gracze na przemian zabierają patyki z planszy.<br>
+					W jednym ruchu można zabrać 1, 2 lub 3 patyki.<br>
+					Gracz, który podniesie ostatni patyk - wygrywa<br></p>
+				<button id="OKinstruction" onclick="closeInstruction()">Ok!</button>
+			</div>
+			
+
+			<script>
+				function instruction() {
+					const instruction = document.getElementById("instruction");
+					instruction.classList.toggle("hidden");
+					
+			  	}
+				function game() {
+					window.location.href="game.html";
+				}
+				function closeInstruction() {
+					const instruction = document.getElementById("instruction");
+					instruction.classList.toggle("hidden");
+				}
+
+
+			</script>
+		
+
+
+		</div>
+	</body>
+</html>

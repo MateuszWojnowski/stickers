@@ -1,0 +1,5 @@
+index.html - start i instrukcje
+styles.css - style
+game.js - glowna pętla gry
+player.js - klasa player
+instrukcja.html
